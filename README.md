@@ -18,23 +18,43 @@ ________________________________________________________________________________
 ### Creating a VPC
 ![vpc creation configurations](https://github.com/user-attachments/assets/b8576a82-7e84-46b4-b748-5f6b39a6314d)
 
+- Created a VPC and named it "hashim-vpc"
+- Manually specified an IPv4 CIDR block
+- The CIDR block defines the range of available IP addresses in the VPC
+- The slash notation (e.g., /16, /24) indicates how many bits are allocated for the network address. The remaining bits are used for host addresses
+- Opted not to use an IPv6 CIDR block for this project, focusing solely on IPv4
 
 ____________________________________________________________________________________________
 ### Creating Subnets
 #### Public Subnet
 ![PublicSubnet1](https://github.com/user-attachments/assets/af1172dd-fdd6-45f0-be2a-840fb7267443)
+
+- Created a public subnet named "PublicSubnet-1"
+- The subnet is located in the **us-east-2a** Availability Zone
+- Assigned a CIDR block of 10.0.5.0/24 to the subnet
 #### Private Subnet
 ![PrivateSubnet1](https://github.com/user-attachments/assets/a4f8e46f-a357-49da-bdbe-da69ef9dcf02)
-
+- Created a private subnet named "PrivateSubnet-1"
+- The subnet is located in the **us-east-2a** Availability Zone
+- Assigned a CIDR block of 10.0.6.0/24 to the subnet
 ___________________________________________________________________________________________________
 ### Creating and Attaching an Internet Gateway
 ![igw](https://github.com/user-attachments/assets/4d591932-fe09-40ed-bf95-42dd68f325d1)
+
+- Created an Internet Gateway named "hashim-igw"
+
 ![attaching igw to vpc](https://github.com/user-attachments/assets/49e597dc-7a2c-4ab3-a8e5-6521080668e4)
 ![attaching igw to vpc 2](https://github.com/user-attachments/assets/9e523b70-4512-4837-a93b-a5f96babd54f)
 
+- After successfully creating an Internet Gateway I attached it to my VPC (hashim-vpc)
 __________________________________________________________________________________________________
 ### Setting Up a NAT Gateway
 ![creating NAT gateway](https://github.com/user-attachments/assets/3dcf32f8-0c9a-4e0e-a03a-14db9294e00e)
+
+- Created a NAT gateway named hashim-NAT-gateway
+- Deployed the NAT gateway in the PublicSubnet-1 subnet
+- Selected a public connectivity type to enable internet access for the NAT gateway
+- Allowed AWS to automatically allocate an Elastic IP to the NAT gateway
 
 _____________________________________________________________________________________________________
 ### Setting Up Route Tables
