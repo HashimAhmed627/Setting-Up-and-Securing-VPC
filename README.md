@@ -131,7 +131,6 @@ ________________________________________________________________________________
 - Successfully established an SSH connection to the web server instance from my local machine.
 - Installed Apache on the web server to serve web pages.
 
-***For the sake of this project, I temporarily allowed all SSH traffic to ensure a smoother experience while setting up the web server.*** 
  
 ![can access webserver via the web](https://github.com/user-attachments/assets/0a8643a9-1ae9-4a91-84f5-defc41c12f63)
 
